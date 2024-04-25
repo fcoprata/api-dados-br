@@ -7,13 +7,13 @@ Esta é uma API construída com FastAPI que permite validar CPF, CNPJ e CEP.
 1. Clone este repositório:
 
     ```bash
-    git clone https://github.com/seu-usuario/seu-repositorio.git
+    git clone https://github.com/fcoprata/api-dados-br
     ```
 
 2. Navegue até o diretório do projeto:
 
     ```bash
-    cd seu-repositorio
+    cd api-dados-br
     ```
 
 3. Crie um ambiente virtual e ative-o:
