@@ -1,5 +1,5 @@
-from modelos.cpf import Cpf
-from modelos.gerador_cpf import Gerador_cpf
+from models.cpf import Cpf
+from models.gerador_cpf import Gerador_cpf
 from fastapi import FastAPI
 
 app = FastAPI()
