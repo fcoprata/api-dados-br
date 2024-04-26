@@ -2,6 +2,19 @@ from validate_docbr import CPF
 
 
 class Cpf:
+    """
+    Represents a CPF (Cadastro de Pessoas Físicas) number.
+
+    Attributes:
+        documento (str): The CPF number.
+
+    Methods:
+        __init__(self, documento: str): Initializes a new instance of the Cpf class.
+        __str__(self) -> str: Returns a string representation of the CPF number.
+        cpf_valid(self, documento: str): Validates the CPF number.
+
+    """
+
     validador = CPF()
 
     def __init__(self, documento: str):
@@ -16,3 +29,6 @@ class Cpf:
     def cpf_valid(self, documento: str):
         if len(documento) == 11:
             return "Valid" if self.validador.validate(documento) else "Invalid"
+
+    def mascara(self, documento: str):
+        return f"{self.validador.mask(documento)}"
