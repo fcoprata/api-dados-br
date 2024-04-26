@@ -21,8 +21,9 @@ class Cpf:
     validador = CPF()
 
     def __init__(self, documento: str):
-        if self.cpf_valid(documento):
-            self.documento = documento
+        doc = documento.replace(".", "").replace(",", "").replace("-", "")
+        if self.cpf_valid(doc):
+            self.documento = doc
         else:
             raise TypeError("CPF invalid")
 
@@ -39,7 +40,7 @@ class Cpf:
         if len(documento) == 11:
             return "Valid" if self.validador.validate(documento) else "Invalid"
 
-    def mascara(self, documento: str) -> str:
+    def mascara(self, doc: str) -> str:
         """
         Applies a mask to the CPF number.
 
@@ -49,4 +50,4 @@ class Cpf:
         Returns:
             str: The CPF number with the mask applied.
         """
-        return f"{self.validador.mask(documento)}"
+        return f"{self.validador.mask(self.documento)}"
