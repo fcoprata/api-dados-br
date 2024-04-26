@@ -29,7 +29,7 @@ class Gerador_CNPJ:
         return gerador.generate(mask)
 
     @staticmethod
-    def gerador_cNPCNPJs(quantidade: int, mask=True):
+    def gerador_CNPJs(quantidade: int, mask=True):
         """
         Generates a dictionary of multiple CNPJ numbers.
 

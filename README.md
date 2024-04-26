@@ -47,7 +47,7 @@ Esta é uma API construída com FastAPI que permite validar CPF, CNPJ e CEP.
     A resposta será um JSON indicando se o CPF é válido ou não.
 
 
-3. Faça uma requisição para validar um CNPJ 🚧:
+3. Faça uma requisição para validar um CNPJ:
 
     ```bash
     curl -X POST -H "Content-Type: application/json" -d '{"cnpj": "12345678000199"}' http://localhost:8000/validate/cnpj
