@@ -9,8 +9,10 @@ class Cpf:
         documento (str): The CPF number.
 
     Methods:
-        __init__(self, documento: str): Initializes a new instance of the Cpf class.
-        __str__(self) -> str: Returns a string representation of the CPF number.
+        __init__(self, documento: str):
+            Initializes a new instance of the Cpf class.
+        __str__(self) -> str:
+            Returns a string representation of the CPF number.
         cpf_valid(self, documento: str): Validates the CPF number.
 
     """
@@ -22,9 +24,6 @@ class Cpf:
             self.documento = documento
         else:
             raise TypeError("CPF invalid")
-
-    def __str__(self) -> str:
-        return f"{self.validador.mask(self.documento)} - {self.cpf_valid(self.documento)}"
 
     def cpf_valid(self, documento: str):
         if len(documento) == 11:
