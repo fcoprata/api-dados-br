@@ -14,6 +14,7 @@ class Cpf:
         __str__(self) -> str:
             Returns a string representation of the CPF number.
         cpf_valid(self, documento: str): Validates the CPF number.
+        mascara(self, documento: str) -> str: Applies a mask to the CPF number.
 
     """
 
@@ -26,8 +27,26 @@ class Cpf:
             raise TypeError("CPF invalid")
 
     def cpf_valid(self, documento: str):
+        """
+        Validates the CPF number.
+
+        Args:
+            documento (str): The CPF number to be validated.
+
+        Returns:
+            str: "Valid" if the CPF number is valid, "Invalid" otherwise.
+        """
         if len(documento) == 11:
             return "Valid" if self.validador.validate(documento) else "Invalid"
 
-    def mascara(self, documento: str):
+    def mascara(self, documento: str) -> str:
+        """
+        Applies a mask to the CPF number.
+
+        Args:
+            documento (str): The CPF number to apply the mask to.
+
+        Returns:
+            str: The CPF number with the mask applied.
+        """
         return f"{self.validador.mask(documento)}"
