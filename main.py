@@ -4,8 +4,9 @@ from models.cpf import Cpf
 from models.cnpj import Cnpj
 from models.gerador_cpf import Gerador_cpf
 from models.gerador_cnpj import Gerador_CNPJ
+from models.cep import Cep
 
-app = FastAPI
+app = FastAPI()
 
 
 @app.get('/api/cpf/is_valid/{cpf}')
@@ -125,6 +126,12 @@ def generate_cnpjs(quantidade: int):
     """
     gerador = Gerador_CNPJ()
     return gerador.gerador_CNPJs(quantidade)
+
+
+@app.get('/api/busca_cep/{cep}')
+def buscador_cep(cep: str):
+    buscar_cep = Cep()
+    return buscar_cep.busca_Cep(cep)
 
 
 if __name__ == "__main__":
