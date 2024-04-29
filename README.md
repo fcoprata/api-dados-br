@@ -40,9 +40,9 @@ Esta é uma API construída com FastAPI que permite validar CPF, CNPJ e CEP.
 
 ## Referências 
 
-Gostaria de agradecer ao Alvaro que é o criado da biblioteca em que pude me basear para construir essa api, segue o link abaixo do github dele.
+Gostaria de agradecer ao Álvaro que é o criado da biblioteca em que pude me basear para construir essa api, segue o link abaixo do github dele.
 
-[Alvaro](https://github.com/alvarofpp/validate-docbr)
+[Github](https://github.com/alvarofpp/validate-docbr)
 
 ## Contribuição
 
