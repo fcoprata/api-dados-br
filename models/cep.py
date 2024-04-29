@@ -47,7 +47,7 @@ class Cep:
         "Failed to retrieve CEP information".
         """
         cep = cep.replace("-", "")
-        if cep.isdigit() or len(cep) == 8:
+        if not cep.isdigit() or len(cep) != 8:
             raise ValueError("Formato invalido do CEP")
 
         url = f"https://viacep.com.br/ws/{cep}/json/"
