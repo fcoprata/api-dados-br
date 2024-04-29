@@ -1,13 +1,26 @@
 import uvicorn
 import os
 from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
 from models.cpf import Cpf
 from models.cnpj import Cnpj
 from models.gerador_cpf import Gerador_cpf
 from models.gerador_cnpj import Gerador_CNPJ
 from models.cep import Cep
 
+
 app = FastAPI()
+
+
+@app.get("/")
+def redirect_to_swagger():
+    """
+    Redirects to the Swagger UI.
+
+    Returns:
+        RedirectResponse: Redirects to the Swagger UI.
+    """
+    return RedirectResponse(url="/docs")
 
 
 @app.get('/api/cpf/is_valid/{cpf}')
