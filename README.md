@@ -52,9 +52,6 @@ Esta é uma API construída com FastAPI que permite validar CPF, CNPJ e CEP.
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
 
-## TODO
-- Implementar CNPJ e CEP
-
 ## License
 
 ```
