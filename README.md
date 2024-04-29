@@ -36,16 +36,13 @@ Esta é uma API construída com FastAPI que permite validar CPF, CNPJ e CEP.
 
 ## Uso
 
-1. Inicie o servidor da API:
+[Swagger](https://api-dados-br-166d8ed0ad05.herokuapp.com/)
 
-    ```bash
-    python main.py
-    ```
+## Referências 
 
-2. Acesse o swagger da API:
-    [Swagger](http://127.0.0.1:8000/docs)
+Gostaria de agradecer ao Alvaro que é o criado da biblioteca em que pude me basear para construir essa api, segue o link abaixo do github dele.
 
-
+[Alvaro](https://github.com/alvarofpp/validate-docbr)
 
 ## Contribuição
 
