@@ -130,6 +130,15 @@ def generate_cnpjs(quantidade: int):
 
 @app.get('/api/busca_cep/{cep}')
 def buscador_cep(cep: str):
+    """
+    Busca um CEP utilizando a classe Cep.
+
+    Args:
+        cep (str): O CEP a ser buscado.
+
+    Returns:
+        str: O resultado da busca do CEP.
+    """
     buscar_cep = Cep()
     return buscar_cep.busca_Cep(cep)
 

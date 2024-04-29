@@ -39,33 +39,13 @@ Esta é uma API construída com FastAPI que permite validar CPF, CNPJ e CEP.
 1. Inicie o servidor da API:
 
     ```bash
-    uvicorn main:app --reload
+    python main.py
     ```
 
-2. Faça uma requisição para validar um CPF:
-
-    ```bash
-    curl -X POST -H "Content-Type: application/json" -d '{"cpf": "12345678900"}' http://localhost:8000/validate/cpf
-    ```
-
-    A resposta será um JSON indicando se o CPF é válido ou não.
+2. Acesse o swagger da API:
+    [Swagger](http://127.0.0.1:8000/docs)
 
 
-3. Faça uma requisição para validar um CNPJ:
-
-    ```bash
-    curl -X POST -H "Content-Type: application/json" -d '{"cnpj": "12345678000199"}' http://localhost:8000/validate/cnpj
-    ```
-
-    A resposta será um JSON indicando se o CNPJ é válido ou não.
-
-4. Faça uma requisição para validar um CEP 🚧:
-
-    ```bash
-    curl -X POST -H "Content-Type: application/json" -d '{"cep": "12345678"}' http://localhost:8000/validate/cep
-    ```
-
-    A resposta será um JSON contendo informações sobre o CEP, como logradouro, bairro, cidade e estado.
 
 ## Contribuição
 
