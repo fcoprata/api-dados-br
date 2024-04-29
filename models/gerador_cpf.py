@@ -48,6 +48,8 @@ class Gerador_cpf:
 
         """
         gerador = CPF()
+        if quantidade > 10:
+            return "Máximo é 10 números de CPF"
         lista_cpfs = gerador.generate_list(quantidade, mask)
         dicionario = {f'cpf {i+1}': cpf for i, cpf in enumerate(lista_cpfs)}
         return dicionario

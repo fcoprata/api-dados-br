@@ -46,6 +46,8 @@ class Gerador_CNPJ:
 
         """
         gerador = CNPJ()
+        if quantidade > 10:
+            return "Máximo é 10 números de CNPJ"
         lista_CNPJ = gerador.generate_list(quantidade, mask)
         dicionario = {f'CNPJ {i+1}': CNPJ for i, CNPJ in enumerate(lista_CNPJ)}
         return dicionario
