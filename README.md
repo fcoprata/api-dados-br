@@ -1,6 +1,6 @@
 # API de Validação de CPF, CNPJ e CEP
 
-![API Dados Br]('assets\Api dados Br.jpg')
+![API Dados Br]('https://github.com/fcoprata/api-dados-br/blob/development/assets/Api%20dados%20Br.jpg')
 
 Esta é uma API construída com FastAPI que permite validar CPF, CNPJ e CEP.
 
