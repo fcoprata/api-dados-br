@@ -1,5 +1,9 @@
 # API de Validação de CPF, CNPJ e CEP
 
+<p align="center">
+    <img src="assets/Api dados Br.jpg" width=430/>
+</p>
+
 Esta é uma API construída com FastAPI que permite validar CPF, CNPJ e CEP.
 
 ## Instalação
