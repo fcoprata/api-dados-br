@@ -27,12 +27,18 @@ class Cep:
         Returns:
             dict: A dictionary containing the CEP information.
 
+        Raises:
+            ValueError: If the CEP format is invalid.
+
         Example:
             cep = Cep()
             cep_info = cep.busca_Cep("12345-678")
             print(cep_info)
         """
         cep = cep.replace("-", "")
+        if cep.isdigit() or len(cep) == 8:
+            raise ValueError("Invalid CEP format")
+
         url = f"https://viacep.com.br/ws/{cep}/json/"
         response = requests.get(url)
         json_cep = response.json()
