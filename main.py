@@ -9,7 +9,14 @@ from models.gerador_cnpj import Gerador_CNPJ
 from models.cep import Cep
 
 
-app = FastAPI()
+app = FastAPI(
+    title='API-Dados-BR',
+    description='''Sua API completa de CPF, CNPJ e CEP: validação,
+    mascaramento, geração e muito mais!
+    Gerencie seus dados com segurança e eficiência com a
+    API completa de CPF, CNPJ e CEP.''',
+    version='1.0.0'
+)
 
 
 @app.get("/", include_in_schema=False)
