@@ -46,6 +46,8 @@ class Gerador_CNPJ:
 
         """
         gerador = CNPJ()
+        if quantidade <= 0:
+            return "Quantidade Invalida"
         if quantidade > 10:
             return "Máximo é 10 números de CNPJ"
         lista_CNPJ = gerador.generate_list(quantidade, mask)
