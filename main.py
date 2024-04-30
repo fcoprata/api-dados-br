@@ -9,6 +9,29 @@ from models.gerador_cnpj import Gerador_CNPJ
 from models.cep import Cep
 
 
+tags_metadata = [
+    {
+        "name": "CPF",
+        "description": """
+                        Confirme a autenticidade e existência.
+                        Receba o valor de maneira organizada e formatada segundo as regras da documentação.
+                        Crie documentos válidos seguindo as regras de criação para utilizar em sua aplicação.
+                        Receba listas de documentos válidos, baseados na quantidade da sua necessidade.""",
+    },
+    {
+        "name": "CNPJ",
+        "description": """
+                        Confirme a autenticidade e existência.
+                        Receba o valor de maneira organizada e formatada segundo as regras da documentação.
+                        Crie documentos válidos seguindo as regras de criação para utilizar em sua aplicação.
+                        Receba listas de documentos válidos, baseados na quantidade da sua necessidade.""",
+    },
+    {
+        "name": "CEP",
+        "description": "Garanta a precisão do endereço."
+    }
+]
+
 app = FastAPI(
     title='API-Dados-BR',
     description='''Sua API completa de CPF, CNPJ e CEP: validação,
@@ -30,7 +53,7 @@ def redirect_to_swagger():
     return RedirectResponse(url="/docs")
 
 
-@app.get('/api/cpf/is_valid/{cpf}')
+@app.get('/api/cpf/is_valid/{cpf}', tags=["CPF"])
 def validate_cpf(cpf: str) -> str:
     """
     Validates a CPF (Cadastro de Pessoas Físicas) number.
@@ -47,7 +70,7 @@ def validate_cpf(cpf: str) -> str:
     return validador_cpf.cpf_valid(cpf)
 
 
-@app.get('/api/cnpj/is_valid/{cnpj}')
+@app.get('/api/cnpj/is_valid/{cnpj}', tags=["CNPJ"])
 def validate_cnpj(cnpj: str) -> str:
     """
     Validates a CNPJ (Cadastro Nacional da Pessoa Jurídica) number.
@@ -64,7 +87,7 @@ def validate_cnpj(cnpj: str) -> str:
     return validador_cnpj.cnpj_valid(cnpj)
 
 
-@app.get("/api/cpf/mascara/{cpf}")
+@app.get("/api/cpf/mascara/{cpf}", tags=["CPF"])
 def mascara_cpf(cpf: str) -> str:
     """
     Applies a mask to the given CPF (Cadastro de Pessoas Físicas) number.
@@ -79,7 +102,7 @@ def mascara_cpf(cpf: str) -> str:
     return validador_cpf.mascara(cpf)
 
 
-@app.get("/api/cnpj/mascara/{cnpj}")
+@app.get("/api/cnpj/mascara/{cnpj}", tags=["CNPJ"])
 def mascara_cnpj(cnpj):
     """
     Applies a mask to the given CNPJ number.
@@ -94,7 +117,7 @@ def mascara_cnpj(cnpj):
     return validador_cnpj.mascara(cnpj)
 
 
-@app.get('/api/cpf/generate/')
+@app.get('/api/cpf/generate/', tags=["CPF"])
 def generate_cpf():
     """
     Generates a random CPF (Cadastro de Pessoas Físicas) number.
@@ -106,7 +129,7 @@ def generate_cpf():
     return gerador.gerador_cpf()
 
 
-@app.get('/api/cnpj/generate/')
+@app.get('/api/cnpj/generate/', tags=["CNPJ"])
 def generate_cnpj():
     """
     Generates a random CNPJ (Cadastro Nacional da Pessoa Jurídica) number.
@@ -118,7 +141,7 @@ def generate_cnpj():
     return gerador.gerador_CNPJ()
 
 
-@app.get('/api/cpf/generate/{quantidade}')
+@app.get('/api/cpf/generate/{quantidade}', tags=["CPF"])
 def generate_cpfs(quantidade: int):
     """
     Generate a given number of CPFs (Brazilian identification numbers).
@@ -134,7 +157,7 @@ def generate_cpfs(quantidade: int):
     return gerador.gerador_cpfs(quantidade)
 
 
-@app.get('/api/cnpj/generate/{quantidade}')
+@app.get('/api/cnpj/generate/{quantidade}', tags=["CNPJ"])
 def generate_cnpjs(quantidade: int):
     """
     Generate a list of CNPJs.
@@ -149,7 +172,7 @@ def generate_cnpjs(quantidade: int):
     return gerador.gerador_CNPJs(quantidade)
 
 
-@app.get('/api/busca_cep/{cep}')
+@app.get('/api/busca_cep/{cep}', tags=["CEP"])
 def buscador_cep(cep: str):
     """
     Busca um CEP utilizando a classe Cep.
