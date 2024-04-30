@@ -13,18 +13,18 @@ tags_metadata = [
     {
         "name": "CPF",
         "description": """
-                        Confirme a autenticidade e existência.
-                        Receba o valor de maneira organizada e formatada segundo as regras da documentação.
-                        Crie documentos válidos seguindo as regras de criação para utilizar em sua aplicação.
-                        Receba listas de documentos válidos, baseados na quantidade da sua necessidade.""",
+        Confirme a autenticidade e existência.
+        Receba o valor de maneira organizada e formatada segundo as regras da documentação.
+        Crie documentos válidos seguindo as regras de criação para utilizar em sua aplicação.
+        Receba listas de documentos válidos, baseados na quantidade da sua necessidade.""",
     },
     {
         "name": "CNPJ",
         "description": """
-                        Confirme a autenticidade e existência.
-                        Receba o valor de maneira organizada e formatada segundo as regras da documentação.
-                        Crie documentos válidos seguindo as regras de criação para utilizar em sua aplicação.
-                        Receba listas de documentos válidos, baseados na quantidade da sua necessidade.""",
+        Confirme a autenticidade e existência.
+        Receba o valor de maneira organizada e formatada segundo as regras da documentação.
+        Crie documentos válidos seguindo as regras de criação para utilizar em sua aplicação.
+        Receba listas de documentos válidos, baseados na quantidade da sua necessidade.""",
     },
     {
         "name": "CEP",
